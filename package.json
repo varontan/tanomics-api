@@ -1,0 +1,41 @@
+{
+  "name": "tanomics-api",
+  "version": "1.0.0",
+  "description": "Tanomics API Server with AI and Scraper",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test:deepseek": "ts-node test-deepseek.ts",
+    "test:scraper": "ts-node compliant-scraper.ts",
+    "scrape": "ts-node scripts/run-scraper.ts",
+    "test:ai": "ts-node scripts/test-ai.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@google/generative-ai": "^0.3.0",
+    "@supabase/supabase-js": "^2.40.0",
+    "axios": "^1.15.0",
+    "bull": "^4.12.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "ioredis": "^5.3.0",
+    "openai": "^4.30.0",
+    "puppeteer": "^22.6.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
